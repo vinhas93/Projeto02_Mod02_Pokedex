@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Red+Hat+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100vh;
+}
+body{
+    background-image: url('/img/fundo.jpg');
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 720px){
+    main #cadastro img{
+        display:none !important;
+    }
+    main #cadastro form{
+        width: 100% !important;
+        
+    }
+}
+@media only screen and (max-width: 700px){
+    *{
+        font-size: small;
+    }
+    main #cadastro {
+        flex-wrap: wrap-reverse !important;
+    }
+    header nav img {
+        width: 120px !important;
+    }
+    
+}
+@media only screen and (max-width: 558px){
+    main #gcard #pokedex #filtro{
+        justify-content:flex-start !important;
+    }
+    main #gcard #pokedex #busca{
+        justify-content:flex-start !important;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    *{
+        font-size: smaller;
+    }
+    header nav img {
+        width: 90px !important;
+    }
+}
+/* --------------------------------------------------- NavBar --------------------------------------------- */
+header{
+    background-image: linear-gradient(#fff, rgb(188, 220, 238))
+}
+header nav{
+    display:flex;
+    width: 100%;
+    height: 65px;
+    box-shadow: 2px 1px 4px rgb(73, 73, 73);
+    align-items: flex-end;
+    justify-content: space-evenly;
+    font-family: Karla;
+    
+}
+header nav img {
+    width: 160px;
+    margin: .2% 0;
+}
+header nav ul{
+    display:flex;
+    width: 70%;
+    height: 50%;
+    list-style: none;
+    align-items: flex-end;
+    list-style: none;
+    text-align: center;
+}
+header nav ul a{
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    padding-bottom: .6%;
+}
+header nav ul a li{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 120%;  
+    border-left: solid .8px rgba(177, 177, 177, 0.644);
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: .8%;
+}
+header nav ul a li p{
+    padding-bottom: 1%;
+}
+header nav ul #navA{
+    border-bottom: 4px solid #8CE376 ;
+    transition: .2s;
+}
+header nav ul #navA:hover{
+    background-image: linear-gradient(transparent, #8CE376 110%);
+    color: white ;
+}
+header nav ul #navB{
+    border-bottom: 4px solid rgb(250, 122, 122) ;
+    transition: .2s;
+}
+header nav ul #navB:hover{
+    background-image: linear-gradient(transparent, rgb(250, 122, 122) 110%);
+    color: white;
+}
+header nav ul #navC{
+    border-bottom: 4px solid #FDD38B ;
+    transition: .2s;
+}
+header nav ul #navC:hover{
+    background-image: linear-gradient(transparent, #FDD38B 110%);
+    color: white;
+}
+header nav ul #navD{
+    border-bottom: 4px solid #5676FD ;
+    transition: .2s;
+}  
+header nav ul #navD:hover{
+    background-image: linear-gradient(transparent, #5676FD 110%);
+    color: white;
+}
+/* --------------------------------------------------- Pokedéx --------------------------------------------- */
+
+/* --------------------- Pesquisa --------------------- */
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+main #gcard{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 6px 2px rgba(168, 180, 184, 0.534);
+    margin: 5% 0;
+    width: 100%;
+    min-width: 250px;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.884);
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+main #gcard #pokedex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 0 3% 0;
+    background-color: rgb(233, 34, 34);
+    border-bottom: solid #000 4px;
+    color: white;
+    font-family: Karla;
+    text-shadow: 1px 2px 3px gray;
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px ;
+    padding-bottom: 15px;
+}
+main #gcard #pokedex h2{
+    width: 100%;
+    text-align: center;
+    padding: 1% 0;
+    font-size: 40px;    
+}
+main #gcard #pokedex #busca{
+    display: flex;
+    justify-content: center;
+    background-color:#ffffff;
+    border-radius:20px;
+    height:32px;
+}
+main #gcard #pokedex #busca button{
+    border:none;
+    height:32px;
+    border-radius:0 20px 20px 0;
+    width:70px;
+    height:32px;
+    font-weight:bold;
+    background:rgb(248, 248, 92);
+}
+main #gcard #pokedex #busca button:hover{
+    background:rgb(253, 253, 140);
+    cursor: pointer;
+    
+}  
+#txtBusca{
+    background-color:transparent;
+    border:none;
+    width:191px;
+    height:32px;
+    outline:none;
+}
+#Busca img{
+    float:left;
+}
+main #gcard #pokedex #filtro{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    min-width: 200px;
+}
+select{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    text-align: center;
+    size: 5%;
+    border: solid rgba(143, 143, 143, 0.562) .5px ;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* --------------------- Pokemon --------------------- */
+main #gcard article #pokemon a {
+    text-decoration: none;
+    color: black;
+    align-items:center;
+    border-radius: 10px;
+    padding: 2%;
+    width: 15%;
+    min-width: 100px;
+    height: auto;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 2px 2px 6px 2px rgba(168, 180, 184, 0.534);
+    margin: 3% 1%;
+    transition: all .3s ease-in-out;
+}
+main #gcard article #pokemon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    align-items: stretch;
+    align-content: center;
+}
+main #gcard article #pokemon .card {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+}
+main #gcard article #pokemon a:hover {
+    transform: scale(1.05);
+    box-shadow:  0 0 2em rgb(148, 148, 148);
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+main #gcard article #pokemon .card .nome{
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: larger;
+    padding: 2%;
+}
+main #gcard article #pokemon .card .tipo{
+    display: flex;
+    justify-content: center;
+    font-family: Karla;
+    font-size: smaller;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1% 0;
+    content: 50;
+}
+main #gcard article #pokemon .card .imagem{
+    width:90%;
+}
+
+/*-----------------------------------------------------detalhes-----------------------------------------------*/
+main #pokemonDet{
+    display: flex;
+}
+
+main #titulodth {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 1% 0;
+    width: 100%;
+    padding: 2% 0 ;
+    gap: 10px;
+    background-color: rgb(233, 34, 34);
+    border-bottom: solid #000 4px;
+    color: white;
+    font-family: Didact Gothic;
+    text-shadow: 1px 2px 3px gray;
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px  ;
+}
+.tipoimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2.5%;
+    padding: .9%;
+    height: fit-content;
+    gap:28px;
+    width: 50%;
+}
+.tipoimg div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    gap:5%;
+    font-family: Inconsolata;
+    font-size: small;
+}
+.tipoimg div img{
+    height: 30px;
+    /* width: 10%; */
+}
+.tipos{
+    padding: 1%;
+    /* size: 1%; */
+    width: 30%;
+    content: 50;
+    text-align:center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 2px rgba(168, 180, 184, 0.534);
+    background-color: #e49f9f;
+}
+.type{
+    display: flex;
+    justify-content:space-between;
+}
+#tipoD{
+    font-family: Inconsolata;
+    font-size:small;
+    text-align:justify;
+    margin-top: 25%;
+}
+
+/* --------------------------------------------------- Cadastro --------------------------------------------- */
+main #cadastro {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 6px 2px rgba(168, 180, 184, 0.534);
+    margin: 5% 0;
+    width: 100%;
+    min-width: 250px;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.884);
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+
+main #cadastro #tituloCadastro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 1% 0;
+    width: 100%;
+    padding: 2% 0 ;
+    gap: 10px;
+    background-color: #FDD38B;
+    border-bottom: solid #000 4px;
+    color: white;
+    font-family: Karla;
+    text-shadow: 1px 2px 3px gray;
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px  ;
+}
+main #cadastro #formulario{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+main #cadastro form{
+    display: flex ;
+    flex-direction: column;
+    width: 50%;
+    margin: 2% 5%;
+    font-family: Montserrat ;
+}
+main #cadastro form div{
+    display: flex;
+    justify-content:space-evenly;
+}
+main #cadastro form label{
+   width: 15%;
+   margin: 1%;
+}
+main #cadastro form input{
+    width: 50%;
+    margin: 1%;
+    border: solid rgba(143, 143, 143, 0.562) .5px ;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    padding: .8%;
+    outline:none;
+}
+main #cadastro img{
+    display: flex;
+    width: 40%;
+    height: 30%;
+    min-width: 230px;
+    min-height: 230px;
+}
+main #cadastro button{
+    display: flex;
+    border-radius: 10px;
+    background-color: #FDD38B;
+    padding: 1%;
+    margin-top: 3%;
+    border: solid rgba(143, 143, 143, 0.562) .5px ;
+    outline: none;
+}
+main #cadastro button:hover{
+    background-color: #fac56a;
+    cursor: pointer;
+}
+
+section#message {
+    padding: 1.5rem;
+    background-color: rgb(197, 255, 214);
+    color: #004d04;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: Karla;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  span#close:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
+  }
+
+/* --------------------------------------------------- Treinadores --------------------------------------------- */
+
+main #treinadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 6px 2px rgba(168, 180, 184, 0.534);
+    margin: 5% 0;
+    width: 100%;
+    min-width: 250px;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.884);
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+
+}
+main #treinadores #tituloTreinadores {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 1% 0;
+    width: 100%;
+    padding: 2% 0 ;
+    gap: 10px;
+    background-color: #5676FD;
+    border-bottom: solid #000 4px;
+    color: white;
+    font-family: Karla;
+    text-shadow: 1px 2px 3px gray;
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px  ;
+}
+main #treinadores #container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+main #treinadores div article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    text-align: center;
+    padding: 1%;
+    font-family: Montserrat ;
+    width: 50%;
+}
+main #treinadores div article .autor{
+    display: flex;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+}
+main #treinadores div article .autor:hover{
+    transform: rotatey(180deg);
+}
+
+main #treinadores div article div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    gap: 5%;
+    width: 100%;    
+    
+}
+main #treinadores div article div button{
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+main #treinadores div article div button:hover{
+    transform: scale(.9);
+    
+}
+main #treinadores div article div img{
+    height: 25px;
+    
+
+}
+/* --------------------------------------------------- Rodapé --------------------------------------------- */
+footer{
+    align-self: flex-end;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+}
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: Futura Md Bt;
+    background-color: rgb(43, 41, 41);
+    color: white;
+}
