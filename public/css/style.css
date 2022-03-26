@@ -315,7 +315,7 @@ main #titulodth {
     margin-top: 2.5%;
     padding: .9%;
     height: fit-content;
-    gap: 20px;
+    gap:20px;
     width: 30%;
     min-width: 180px;
 }
@@ -333,7 +333,8 @@ main #titulodth {
     /* width: 10%; */
 }
 .tipos{
-    padding: 4% 0;
+    padding: 4% 0 ;
+    /* size: 1%; */
     width: 100%;
     content: 50;
     text-align:center;
