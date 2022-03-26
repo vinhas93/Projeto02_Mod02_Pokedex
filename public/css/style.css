@@ -259,7 +259,7 @@ main #gcard article #pokemon a:hover {
     box-shadow:  0 0 2em rgb(148, 148, 148);
     position: sticky;
     top: 0;
-    bottom: 0;
+    bottom: 8%;
     cursor: pointer;
 }
 main #gcard article #pokemon .card .nome{
@@ -314,6 +314,7 @@ main #titulodth {
     height: fit-content;
     gap: 20px;
     width: 30%;
+    min-width: 180px;
 }
 .tipoimg div{
     display: flex;
