@@ -312,8 +312,8 @@ main #titulodth {
     margin-top: 2.5%;
     padding: .9%;
     height: fit-content;
-    gap:28px;
-    width: 50%;
+    gap: 20px;
+    width: 30%;
 }
 .tipoimg div{
     display: flex;
@@ -329,9 +329,8 @@ main #titulodth {
     /* width: 10%; */
 }
 .tipos{
-    padding: 1%;
-    /* size: 1%; */
-    width: 30%;
+    padding: 4% 0;
+    width: 100%;
     content: 50;
     text-align:center;
     border-radius: 5px;
