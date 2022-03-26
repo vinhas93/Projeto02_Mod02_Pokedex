@@ -19,6 +19,9 @@ body{
     main #cadastro img{
         display:none !important;
     }
+    main #cadastro form div{
+        gap: 10%
+    }
     main #cadastro form{
         width: 100% !important;
         
